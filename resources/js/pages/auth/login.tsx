@@ -96,16 +96,16 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                             <div className="mt-4 space-y-3">
                                 <div className="flex items-center gap-3 text-sm text-gray-600">
                                     <Globe className="h-5 w-5 text-gray-400" />
-                                    <span>hmif@itera.com</span>
+                                    <span>https://hmif.if.itera.ac.id/</span>
                                 </div>
-                                <div className="flex items-center gap-3 text-sm text-gray-600">
+                                {/* <div className="flex items-center gap-3 text-sm text-gray-600">
                                     <Mail className="h-5 w-5 text-gray-400" />
                                     <span>hmif@it.com</span>
-                                </div>
+                                </div> */}
                                 <div className="flex items-center gap-3 text-sm text-gray-600">
                                     <Mail className="h-5 w-5 text-gray-400" />
                                     <span>hmif@what.com</span>
-                                </div>
+                                </div> 
                             </div>
                         </div>
                     </div>
