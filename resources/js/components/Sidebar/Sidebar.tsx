@@ -1,13 +1,13 @@
 import { Home, Bell, User, ClipboardList, FileText, BarChart, Users } from "lucide-react";
 
 const menuItems = [
-  { label: "Dashboard", icon: Home },
-  { label: "Pengumuman", icon: Bell },
-  { label: "Data Diri", icon: User },
-  { label: "Riwayat Absen", icon: ClipboardList },
-  { label: "Riwayat Tugas", icon: FileText },
-  { label: "Pelaporan", icon: BarChart },
-  { label: "Kontak Tim", icon: Users },
+  { label: "Dashboard", icon: Home ,path: "/dashboard"},
+  { label: "Pengumuman", icon: Bell ,path: "/pengumuman"},
+  { label: "Data Diri", icon: User ,path: "/data-diri"},
+  { label: "Riwayat Absen", icon: ClipboardList ,path: "/riwayat-absen"},
+  { label: "Riwayat Tugas", icon: FileText ,path: "/riwayat-tugas"},
+  { label: "Pelaporan", icon: BarChart ,path: "/pelaporan"},
+  { label: "Kontak Tim", icon: Users ,path: "/kontak-tim"},
 ];
 
 export default function Sidebar() {
@@ -18,7 +18,7 @@ export default function Sidebar() {
         {menuItems.map((item, idx) => (
           <a
             key={idx}
-            href="#"
+            href={item.path}
             className="flex items-center gap-3 p-3 hover:bg-indigo-50 text-gray-700"
           >
             <item.icon size={20} />
