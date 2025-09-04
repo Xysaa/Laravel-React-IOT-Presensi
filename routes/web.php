@@ -8,10 +8,15 @@ Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('home');
 
+<<<<<<< HEAD
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(["auth"])->name('dashboard');
+=======
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->name('dashboard');
+>>>>>>> 66e481fe3d6aa3fe3754f7c6ff698931d6f03fda
 
 Route::get('/riwayat-tugas', function () {
     return Inertia::render('RiwayatTugas/RiwayatTugas');
