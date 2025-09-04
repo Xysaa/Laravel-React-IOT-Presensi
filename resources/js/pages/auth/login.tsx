@@ -2,6 +2,7 @@ import { Head, useForm } from '@inertiajs/react';
 import { FormEventHandler } from 'react';
 import { User, Lock, Globe, Mail, LoaderCircle } from 'lucide-react';
 import InputError from '@/components/input-error';
+<<<<<<< HEAD
 import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -11,6 +12,13 @@ import AuthLayout from '@/layouts/auth-layout';
 import logohmif from '../../../assets/logo/images.jpeg';
 type LoginForm = {
     username: string;
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import logohmif from '../../../assets/logo/images.jpeg';
+type LoginForm = {
+    email: string;
+>>>>>>> 166eb302f93b1282adae1714ae45814ff8b6efa6
     password: string;
     remember: boolean;
 };
@@ -22,7 +30,11 @@ interface LoginProps {
 
 export default function Login({ status, canResetPassword }: LoginProps) {
     const { data, setData, post, processing, errors, reset } = useForm<Required<LoginForm>>({
+<<<<<<< HEAD
         username: '',
+=======
+        email: '',
+>>>>>>> 166eb302f93b1282adae1714ae45814ff8b6efa6
         password: '',
         remember: false,
     });
@@ -52,11 +64,16 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                                 <div className="relative">
                                     <User className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
                                     <Input
+<<<<<<< HEAD
                                         id="username"
+=======
+                                        id="email"
+>>>>>>> 166eb302f93b1282adae1714ae45814ff8b6efa6
                                         type="text"
                                         required
                                         autoFocus
                                         autoComplete="username"
+<<<<<<< HEAD
                                         value={data.username}
                                         onChange={(e) => setData('username', e.target.value)}
                                         placeholder="Username"
@@ -64,6 +81,15 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                                     />
                                 </div>
                                 <InputError message={errors.username} />
+=======
+                                        value={data.email}
+                                        onChange={(e) => setData('email', e.target.value)}
+                                        placeholder="Email"
+                                        className="pl-10" // Padding to make space for the icon
+                                    />
+                                </div>
+                                <InputError message={errors.email} />
+>>>>>>> 166eb302f93b1282adae1714ae45814ff8b6efa6
                             </div>
 
                             {/* Password Input with Icon */}
